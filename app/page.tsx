@@ -1,65 +1,167 @@
+import Hero3DWrapper from "@/components/Hero3DWrapper";
+import { Navbar } from "@/components/Navbar";
+import { ContactForm } from "@/components/ContactForm";
 import Image from "next/image";
+import { Wrench, ShieldCheck, ArrowRight, User, Mail, MessageSquare, Send, Droplet, PhoneCall } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="relative min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-50 overflow-hidden font-sans transition-colors duration-300">
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Hero Section */}
+      <main className="relative z-10 w-full min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center px-6 md:px-24 pt-28 pb-12 gap-0 lg:gap-12">
+        
+        {/* Left: Text */}
+        <div className="relative z-20 max-w-2xl w-full mx-auto lg:mx-0 text-center lg:text-left flex flex-col items-center lg:items-start order-last lg:order-first -mt-6 lg:mt-0">
+          <h1 className="text-[2.5rem] sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] mb-6 drop-shadow-sm dark:drop-shadow-lg text-slate-900 dark:text-white w-full">
+            Zero Gravity. <br className="hidden lg:block" />
+            <span className="text-blue-600 dark:text-blue-500">Infinite Flow.</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-xl font-light leading-relaxed px-4 lg:px-0 w-full">
+            Experience next-generation plumbing solutions. From residential leaks to commercial 
+            overhauls, GF Plumbing delivers precision and reliability that stands the test of time.
           </p>
+          <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-4 pointer-events-auto px-4 lg:px-0">
+            <a href="#contact" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:scale-105 dark:hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] flex items-center justify-center gap-2">
+              Get an Estimate
+              <ArrowRight size={20} />
+            </a>
+            <a href="#services" className="w-full sm:w-auto bg-white/80 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-700/80 backdrop-blur-md text-slate-900 dark:text-white px-8 py-4 rounded-full font-bold transition-all border border-slate-300 dark:border-slate-700 focus:outline-none flex items-center justify-center">
+              Our Services
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Right: 3D Canvas */}
+        <div className="relative w-full h-[45vh] lg:h-[80vh] flex items-center justify-center order-first lg:order-last">
+          <Hero3DWrapper />
         </div>
       </main>
+
+      {/* Services Section */}
+      <section id="services" className="relative z-20 py-32 px-6 md:px-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-20 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Expert Services</h2>
+            <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-6" />
+            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">We handle everything from minor repairs to major installations with extreme attention to detail and modern tools.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-slate-50 dark:bg-slate-950 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-colors group shadow-sm hover:shadow-md">
+              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Wrench className="text-blue-600 dark:text-blue-500" size={28} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Repairs & Maintenance</h3>
+              <p className="text-slate-600 dark:text-slate-400">Fast, reliable fixes for leaks, clogs, and broken pipes to keep your system in perfect gravity.</p>
+            </div>
+            
+            <div className="bg-slate-50 dark:bg-slate-950 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-colors group shadow-sm hover:shadow-md">
+              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Droplet className="text-blue-600 dark:text-blue-500" size={28} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Water Heaters</h3>
+              <p className="text-slate-600 dark:text-slate-400">Installation and repair of modern tankless and traditional water heating systems.</p>
+            </div>
+            
+            <div className="bg-slate-50 dark:bg-slate-950 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-colors group shadow-sm hover:shadow-md">
+              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <ShieldCheck className="text-blue-600 dark:text-blue-500" size={28} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Full Inspections</h3>
+              <p className="text-slate-600 dark:text-slate-400">Comprehensive system checks using advanced diagnostic tools to prevent future issues.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section id="about" className="relative z-20 py-32 px-6 md:px-24 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+          <div className="flex-1 space-y-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Redefining Plumbing</h2>
+            <div className="w-24 h-1 bg-blue-500 rounded-full" />
+            <p className="text-slate-700 dark:text-slate-400 text-lg leading-relaxed">
+              At <strong className="font-semibold text-slate-900 dark:text-white">GF Plumbing</strong>, we believe that the systems keeping our homes and businesses flowing should be treated with the highest level of precision and technological care.
+            </p>
+            <p className="text-slate-700 dark:text-slate-400 text-lg leading-relaxed">
+              Founded on the principles of reliability and advanced diagnostics, our team brings a "zero-gravity" mindset to problem-solving. We don't just fix leaks; we engineer solutions that prevent them from happening again, using state-of-the-art non-invasive tools and top-tier materials.
+            </p>
+            <div className="flex gap-4 pt-4">
+              <div className="flex gap-2 items-center text-slate-700 dark:text-slate-300">
+                <ShieldCheck className="text-blue-600 dark:text-blue-500" size={24} />
+                <span className="font-medium">Licensed & Insured</span>
+              </div>
+              <div className="flex gap-2 items-center text-slate-700 dark:text-slate-300">
+                <Wrench className="text-blue-600 dark:text-blue-500" size={24} />
+                <span className="font-medium">24/7 Support</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 relative w-full overflow-visible">
+            <div className="aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden relative shadow-2xl border border-slate-200 dark:border-slate-800 bg-white">
+              <Image 
+                src="/about-plumber.png" 
+                alt="Apex Plumbers at Work" 
+                fill 
+                className="object-cover relative z-10 p-2 rounded-[2rem]" 
+              />
+              <div className="absolute inset-0 bg-blue-500/5 mix-blend-overlay pointer-events-none z-20" />
+            </div>
+            {/* Decorative background blur */}
+            <div className="absolute -inset-4 bg-blue-500/20 blur-3xl -z-10 rounded-full opacity-50" />
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="relative z-20 py-32 px-6 md:px-24 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Get in Touch</h2>
+            <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-6" />
+            <p className="text-slate-600 dark:text-slate-400 text-lg">Need immediate assistance or planning a major project? Drop a message or give us a call and a specialist will respond promptly with a comprehensive implementation roadmap.</p>
+            <div className="mt-8 md:hidden flex justify-center">
+              <a href="tel:+233545404311" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg flex items-center gap-2 text-lg">
+                <PhoneCall size={20} />
+                <span>Call Now</span>
+              </a>
+            </div>
+          </div>
+
+          <div className="bg-slate-50 dark:bg-slate-950 p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-xl dark:shadow-[0_0_40px_-15px_rgba(37,99,235,0.2)] relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
+            
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-50 dark:bg-slate-950 pt-16 pb-8 px-6 md:px-24 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mb-12 text-slate-600 dark:text-slate-400">
+          <div className="text-center md:text-left">
+            <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">GF Plumbing</h4>
+            <p>123 Gravity Flow Ave.<br/>Houston, TX 77001</p>
+          </div>
+          <div className="text-center md:text-right space-y-2">
+            <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Contact Information</h4>
+            <p className="flex items-center justify-center md:justify-end gap-2">
+              <PhoneCall size={16} className="text-blue-500" /> 
+              (555) 123-4567
+            </p>
+            <p className="flex items-center justify-center md:justify-end gap-2">
+              <Mail size={16} className="text-blue-500" /> 
+              service@apexplumbing.com
+            </p>
+          </div>
+        </div>
+        <div className="text-center text-sm text-slate-500 dark:text-slate-600 border-t border-slate-200 dark:border-slate-800 pt-8">
+          <p>&copy; {new Date().getFullYear()} GF Plumbing. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
