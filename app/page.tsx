@@ -14,7 +14,7 @@ export default function Home() {
       <main className="relative z-10 w-full min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center px-6 md:px-24 pt-28 pb-12 gap-0 lg:gap-12">
         
         {/* Left: Text */}
-        <div className="relative z-20 max-w-2xl w-full mx-auto lg:mx-0 text-center lg:text-left flex flex-col items-center lg:items-start order-last lg:order-first lg:mt-0">
+        <div className="relative z-20 max-w-2xl w-full mx-auto lg:mx-0  lg:text-left flex flex-col items-center lg:items-start order-last lg:order-first lg:mt-0">
           <h1 className="text-[2.5rem] sm:text-5xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] mb-6 drop-shadow-sm dark:drop-shadow-lg text-blue-950 dark:text-neutral-500s w-full">
             Goodflow Mechanical  <br className="hidden lg:block" />
             <span className="text-blue-950 dark:text-blue-950 capitalize">Plumbing Services</span>
