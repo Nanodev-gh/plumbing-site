@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Droplet, PhoneCall, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,10 +21,11 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <div className="text-xl md:text-2xl font-bold flex items-center gap-2 z-50">
-          <Droplet className="text-blue-600 dark:text-blue-500" fill="currentColor" />
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600">
+          {/* <Droplet className="text-blue-600 dark:text-blue-500" fill="currentColor" /> */}
+          <Image src="/logo.png" alt="GF Plumbing Logo" width={100} height={100} className="" />
+          {/* <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600">
             GF Plumbing
-          </span>
+          </span> */}
         </div>
 
         {/* Desktop Links */}

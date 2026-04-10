@@ -15,9 +15,9 @@ export default function Home() {
         
         {/* Left: Text */}
         <div className="relative z-20 max-w-2xl w-full mx-auto lg:mx-0 text-center lg:text-left flex flex-col items-center lg:items-start order-last lg:order-first -mt-6 lg:mt-0">
-          <h1 className="text-[2.5rem] sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] mb-6 drop-shadow-sm dark:drop-shadow-lg text-slate-900 dark:text-white w-full">
-            Zero Gravity. <br className="hidden lg:block" />
-            <span className="text-blue-600 dark:text-blue-500">Infinite Flow.</span>
+          <h1 className="text-[2.5rem] sm:text-5xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] mb-6 drop-shadow-sm dark:drop-shadow-lg text-blue-950 dark:text-neutral-500s w-full">
+            Goodflow Mechanical . <br className="hidden lg:block" />
+            <span className="text-blue-950 dark:text-blue-950 capitalize">Plumbing Services</span>
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-xl font-light leading-relaxed px-4 lg:px-0 w-full">
             Experience next-generation plumbing solutions. From residential leaks to commercial 
@@ -126,7 +126,7 @@ export default function Home() {
             <div className="mt-8 md:hidden flex justify-center">
               <a href="tel:+233545404311" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg flex items-center gap-2 text-lg">
                 <PhoneCall size={20} />
-                <span>Call Now</span>
+                <span>+233545404311 / +233509502802</span>
               </a>
             </div>
           </div>
@@ -143,24 +143,25 @@ export default function Home() {
       <footer className="bg-slate-50 dark:bg-slate-950 pt-16 pb-8 px-6 md:px-24 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mb-12 text-slate-600 dark:text-slate-400">
           <div className="text-center md:text-left">
-            <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">GF Plumbing</h4>
-            <p>123 Gravity Flow Ave.<br/>Houston, TX 77001</p>
-          </div>
-          <div className="text-center md:text-right space-y-2">
-            <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Contact Information</h4>
+            <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Goodflow Mechanical Plumbing Services</h4>
             <p className="flex items-center justify-center md:justify-end gap-2">
               <PhoneCall size={16} className="text-blue-500" /> 
-              (555) 123-4567
+              +233545404311 / +233509502802
             </p>
             <p className="flex items-center justify-center md:justify-end gap-2">
               <Mail size={16} className="text-blue-500" /> 
               service@apexplumbing.com
             </p>
           </div>
+          {/* <div className="text-center md:text-right space-y-2">
+            <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Contact Information</h4>
+          </div> */}
         </div>
         <div className="text-center text-sm text-slate-500 dark:text-slate-600 border-t border-slate-200 dark:border-slate-800 pt-8">
-          <p>&copy; {new Date().getFullYear()} GF Plumbing. All rights reserved.</p>
+        
         </div>
+        <p className="text-center text-[11px] italic">&copy; {new Date().getFullYear()} Goodflow Mechanical Plumbing Services. All rights reserved.</p>
+
       </footer>
     </div>
   );

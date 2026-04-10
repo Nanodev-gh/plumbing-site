@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Apex Plumbing | Modern Plumbing Solutions",
+  title: "Good Flow Plumbing Services",
   description: "Professional plumbing services with a modern touch. We fix leaks, pipes, and more.",
 };
 
