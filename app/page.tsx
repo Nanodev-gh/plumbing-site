@@ -14,14 +14,14 @@ export default function Home() {
       <main className="relative z-10 w-full min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center px-6 md:px-24 pt-28 pb-12 gap-0 lg:gap-12">
         
         {/* Left: Text */}
-        <div className="relative z-20 max-w-2xl w-full mx-auto lg:mx-0 text-center lg:text-left flex flex-col items-center lg:items-start order-last lg:order-first -mt-6 lg:mt-0">
+        <div className="relative z-20 max-w-2xl w-full mx-auto lg:mx-0 text-center lg:text-left flex flex-col items-center lg:items-start order-last lg:order-first lg:mt-0">
           <h1 className="text-[2.5rem] sm:text-5xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] mb-6 drop-shadow-sm dark:drop-shadow-lg text-blue-950 dark:text-neutral-500s w-full">
-            Goodflow Mechanical . <br className="hidden lg:block" />
+            Goodflow Mechanical  <br className="hidden lg:block" />
             <span className="text-blue-950 dark:text-blue-950 capitalize">Plumbing Services</span>
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-xl font-light leading-relaxed px-4 lg:px-0 w-full">
             Experience next-generation plumbing solutions. From residential leaks to commercial 
-            overhauls, GF Plumbing delivers precision and reliability that stands the test of time.
+            overhauls, Goodflow Plumbing delivers precision and reliability that stands the test of time.
           </p>
           <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-4 pointer-events-auto px-4 lg:px-0">
             <a href="#contact" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:scale-105 dark:hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] flex items-center justify-center gap-2">
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
 
         {/* Right: 3D Canvas */}
-        <div className="relative w-full h-[45vh] lg:h-[80vh] flex items-center justify-center order-first lg:order-last">
+        <div className="relative w-full h-[30vh] lg:h-[80vh] flex items-center justify-center order-first lg:order-last">
           <Hero3DWrapper />
         </div>
       </main>
@@ -160,7 +160,7 @@ export default function Home() {
         <div className="text-center text-sm text-slate-500 dark:text-slate-600 border-t border-slate-200 dark:border-slate-800 pt-8">
         
         </div>
-        <p className="text-center text-[11px] italic">&copy; {new Date().getFullYear()} Goodflow Mechanical Plumbing Services. All rights reserved.</p>
+        <p className="text-center text-[11px] italic">&copy; {new Date().getFullYear()} Goodflow Mechanical Plumbing Services. <br/> All rights reserved.</p>
 
       </footer>
     </div>
