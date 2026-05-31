@@ -1,11 +1,9 @@
 "use client";
 
-import { Canvas } from '@react-three/fiber';
-import { Environment, Float, Preload } from '@react-three/drei';
-import { Wrench, Faucet } from './FloatingPlumbingObjects';
-import { Suspense, useEffect, useState } from 'react';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
-export default function Hero3D() {
+export default function Hero3D({imageSrc}: {imageSrc?: string}) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -15,24 +13,35 @@ export default function Hero3D() {
   if (!mounted) return null;
 
   return (
-    <div className="w-full h-full z-0 pointer-events-auto opacity-80 mix-blend-screen">
-      <Canvas camera={{ position: [0, 0, 10], fov: 45 }} dpr={[1, 2]}>
-        <ambientLight intensity={0.5} />
-        <spotLight position={[10, 10, 10]} angle={0.2} penumbra={1} intensity={2} castShadow />
-        <pointLight position={[-10, -10, -10]} intensity={1} color="#3b82f6" />
-        <pointLight position={[10, -10, 10]} intensity={1.5} color="#2563eb" />
+    <div className="relative w-full h-full flex items-center justify-center p-4">
+      {/* Decorative background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-500/10 dark:bg-blue-600/20 blur-[100px] rounded-full -z-10" />
+      
+      <div className="relative w-full max-w-150 aspect-square animate-float">
+        {/* Main Image Container with Glassmorphism */}
+        <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden  shadow-2xl backdrop-blur-sm">
+          <Image
+            // src="/hero-plumbing-vector-transparent.png"
+            src={imageSrc || "/plumber-banner.jpg"}
+            alt="Plumbing Vector Illustration"
+            fill
+            className="object-cover transition-transform duration-700 hover:scale-105"
+            priority
+          />
+          {/* Overlay gradient for depth */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-[2.5rem] pointer-events-none" />
+        </div>
         
-        <Suspense fallback={null}>
-          <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
-            <Wrench position={[-3, 0, -2]} scale={0.9} />
-          </Float>
-          <Float speed={2} rotationIntensity={1.5} floatIntensity={1.5}>
-            <Faucet position={[3, -1, -1]} scale={0.7} />
-          </Float>
-          <Environment preset="city" />
-          <Preload all />
-        </Suspense>
-      </Canvas>
+        {/* Floating Accent Elements */}
+        <div className="absolute -top-6 -right-6 w-24 h-24 bg-white/10 dark:bg-slate-800/30 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 rounded-2xl shadow-xl flex items-center justify-center -rotate-12 animate-pulse transition-transform hover:rotate-0 duration-500">
+           <div className="w-12 h-1 bg-blue-500 rounded-full" />
+        </div>
+        
+        <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-600/20 dark:bg-blue-900/30 backdrop-blur-md border border-blue-400/20 rounded-full shadow-2xl flex items-center justify-center animate-bounce-slow">
+           <div className="w-16 h-16 border-4 border-blue-500/30 rounded-full border-t-blue-500 animate-spin" />
+        </div>
+      </div>
     </div>
   );
 }

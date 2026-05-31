@@ -18,7 +18,9 @@ export function ContactForm() {
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
     
     // Open the user's default email client
-    window.location.href = `mailto:nanodev.gh@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:Goodflowplumbing26@gmail.com?subject=${subject}&body=${body}`;
+
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (

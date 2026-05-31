@@ -17,12 +17,21 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'py-4 bg-white/90 dark:bg-slate-950/90 shadow-sm border-b border-slate-200 dark:border-white/10 backdrop-blur-md' : 'py-6 bg-transparent border-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+    <nav className={`fixed top-0 w-full h-14 z-50 transition-all duration-300 ${isScrolled ? 'py-4  dark:bg-slate-950/90 shadow-sm border-b border-slate-200 dark:border-white/10 backdrop-blur-md' : 'py-6 bg-transparent border-transparent'}`}>
+      <div className="max-w-7xl h-full mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <div className="text-xl md:text-2xl font-bold flex items-center gap-2 z-50">
           {/* <Droplet className="text-blue-600 dark:text-blue-500" fill="currentColor" /> */}
-          <Image src="/logo.png" alt="GF Plumbing Logo" width={100} height={100} className="" />
+          <div className="relative w-24 h-32 flex items-center justify-center">
+            <Image 
+              src="/logo2-real-transparent.png" 
+              alt="Goodflow Plumbing Logo" 
+              fill
+              // width={200}
+              // height={500}
+              className="object-contain mt-2.5" 
+            />
+          </div>
           {/* <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600">
             GF Plumbing
           </span> */}

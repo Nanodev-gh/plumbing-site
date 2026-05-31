@@ -15,11 +15,12 @@ export default function Home() {
         
         {/* Left: Text */}
         <div className="relative z-20 max-w-2xl w-full mx-auto lg:mx-0  lg:text-left flex flex-col items-center lg:items-start order-last lg:order-first lg:mt-0">
-          <h1 className="text-[2.5rem] sm:text-5xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] mb-6 drop-shadow-sm dark:drop-shadow-lg text-blue-950 dark:text-neutral-500s w-full">
+          
+          <h1 className="text-2xl lg:text-6xl font-light tracking-tight leading-[1.15] mb-6 drop-shadow-sm dark:drop-shadow-lg text-blue-950 dark:text-neutral-500 w-full">
             Goodflow Mechanical  <br className="hidden lg:block" />
             <span className="text-blue-950 dark:text-blue-950 capitalize">Plumbing Services</span>
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-xl font-light leading-relaxed px-4 lg:px-0 w-full">
+          <p className="text-base sm:text-lg lg:text-2xl text-slate-600 dark:text-slate-400 mb-8 max-w-xl font-light leading-relaxed px-4 lg:px-0 w-full">
             Experience next-generation plumbing solutions. From residential leaks to commercial 
             overhauls, Goodflow Plumbing delivers precision and reliability that stands the test of time.
           </p>
@@ -46,10 +47,10 @@ export default function Home() {
           <div className="mb-20 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Expert Services</h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-6" />
-            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">We handle everything from minor repairs to major installations with extreme attention to detail and modern tools.</p>
+            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg md:text-2xl">We handle everything from minor repairs to major installations with extreme attention to detail and modern tools.</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-slate-50 dark:bg-slate-950 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-colors group shadow-sm hover:shadow-md">
               <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Wrench className="text-blue-600 dark:text-blue-500" size={28} />
@@ -73,6 +74,14 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Full Inspections</h3>
               <p className="text-slate-600 dark:text-slate-400">Comprehensive system checks using advanced diagnostic tools to prevent future issues.</p>
             </div>
+
+            <div className="bg-slate-50 dark:bg-slate-950 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 transition-colors group shadow-sm hover:shadow-md">
+              <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Send className="text-blue-600 dark:text-blue-500" size={28} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">New Projects</h3>
+              <p className="text-slate-600 dark:text-slate-400">From start to finish, we handle complete plumbing installations for new constructions and renovations.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -83,10 +92,10 @@ export default function Home() {
           <div className="flex-1 space-y-8">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Redefining Plumbing</h2>
             <div className="w-24 h-1 bg-blue-500 rounded-full" />
-            <p className="text-slate-700 dark:text-slate-400 text-lg leading-relaxed">
-              At <strong className="font-semibold text-slate-900 dark:text-white">GF Plumbing</strong>, we believe that the systems keeping our homes and businesses flowing should be treated with the highest level of precision and technological care.
+            <p className="text-slate-700 dark:text-slate-400 text-lg md:text-2xl leading-relaxed">
+              At <strong className="font-semibold text-slate-900 dark:text-white">Goodflow Plumbing</strong>, we believe that the systems keeping our homes and businesses flowing should be treated with the highest level of precision and technological care.
             </p>
-            <p className="text-slate-700 dark:text-slate-400 text-lg leading-relaxed">
+            <p className="text-slate-700 dark:text-slate-400 text-lg md:text-2xl leading-relaxed">
               Founded on the principles of reliability and advanced diagnostics, our team brings a "zero-gravity" mindset to problem-solving. We don't just fix leaks; we engineer solutions that prevent them from happening again, using state-of-the-art non-invasive tools and top-tier materials.
             </p>
             <div className="flex gap-4 pt-4">
@@ -101,17 +110,19 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-1 relative w-full overflow-visible">
-            <div className="aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden relative shadow-2xl border border-slate-200 dark:border-slate-800 bg-white">
+            {/* <div className="aspect-square  rounded-md overflow-hidden relative shadow-sm border border-slate-200 dark:border-slate-800">
               <Image 
-                src="/about-plumber.png" 
+                src="/plumbing.jpg" 
                 alt="Apex Plumbers at Work" 
                 fill 
-                className="object-cover relative z-10 p-2 rounded-[2rem]" 
+                className="object-cover relative z-10" 
               />
+              
               <div className="absolute inset-0 bg-blue-500/5 mix-blend-overlay pointer-events-none z-20" />
-            </div>
+            </div> */}
             {/* Decorative background blur */}
-            <div className="absolute -inset-4 bg-blue-500/20 blur-3xl -z-10 rounded-full opacity-50" />
+            {/* <div className="absolute -inset-4 bg-blue-500/20 blur-3xl -z-10 rounded-full opacity-50" /> */}
+            <Hero3DWrapper src="/hero-plumbing-vector-transparent.png"/>
           </div>
         </div>
       </section>
@@ -122,7 +133,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 dark:text-white">Get in Touch</h2>
             <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-6" />
-            <p className="text-slate-600 dark:text-slate-400 text-lg">Need immediate assistance or planning a major project? Drop a message or give us a call and a specialist will respond promptly with a comprehensive implementation roadmap.</p>
+            <p className="text-slate-600 dark:text-slate-400 text-lg md:text-2xl">Need immediate assistance or planning a major project? Drop a message or give us a call and a specialist will respond promptly with a comprehensive implementation roadmap.</p>
             <div className="mt-8 md:hidden flex justify-center">
               <a href="tel:+233545404311" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-bold transition-all shadow-lg flex items-center gap-2 text-lg">
                 <PhoneCall size={20} />
@@ -141,7 +152,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-slate-50 dark:bg-slate-950 pt-16 pb-8 px-6 md:px-24 border-t border-slate-200 dark:border-slate-900 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 mb-12 text-slate-600 dark:text-slate-400">
+        <div className="max-w-7xl mx-auto flex flex-col  justify-between items-center gap-8 mb-12 text-slate-600 dark:text-slate-400">
           <div className="text-center md:text-left">
             <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Goodflow Mechanical Plumbing Services</h4>
             <p className="flex items-center justify-center md:justify-end gap-2">
@@ -150,7 +161,7 @@ export default function Home() {
             </p>
             <p className="flex items-center justify-center md:justify-end gap-2">
               <Mail size={16} className="text-blue-500" /> 
-              service@apexplumbing.com
+              Goodflowplumbing26@gmail.com
             </p>
           </div>
           {/* <div className="text-center md:text-right space-y-2">
