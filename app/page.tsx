@@ -93,7 +93,7 @@ export default function Home() {
       <section id="about" className="relative z-20 py-32 px-6 md:px-24 bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <div className="flex-1 space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white">Redefining Plumbing</h2>
+            <h2 className="text-4xl sm:mt-3 md:text-5xl font-bold text-slate-900 dark:text-white">Redefining Plumbing</h2>
             <div className="w-24 h-1 bg-blue-500 rounded-full" />
             <p className="text-slate-700 dark:text-slate-400 text-lg md:text-2xl leading-relaxed">
               At <strong className="font-semibold text-slate-900 dark:text-white">Goodflow Plumbing</strong>, we believe that the systems keeping our homes and businesses flowing should be treated with the highest level of precision and technological care.
@@ -112,6 +112,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           <div className="flex-1 relative w-full overflow-visible">
             {/* <div className="aspect-square  rounded-md overflow-hidden relative shadow-sm border border-slate-200 dark:border-slate-800">
               <Image 
