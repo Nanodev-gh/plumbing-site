@@ -126,7 +126,7 @@ export default function Home() {
             </div> */}
             {/* Decorative background blur */}
             {/* <div className="absolute -inset-4 bg-blue-500/20 blur-3xl -z-10 rounded-full opacity-50" /> */}
-            <Hero3DWrapper src="/hero-plumbing-vector-transparent.png"/>
+            <Hero3DWrapper src="/feature.jpg"/>
           </div>
         </div>
       </section>
