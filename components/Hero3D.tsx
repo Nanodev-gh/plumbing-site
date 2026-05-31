@@ -38,8 +38,8 @@ export default function Hero3D({imageSrc}: {imageSrc?: string}) {
            <div className="w-12 h-1 bg-blue-500 rounded-full" />
         </div>
         
-        <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-blue-600/20 dark:bg-blue-900/30 backdrop-blur-md border border-blue-400/20 rounded-full shadow-2xl flex items-center justify-center animate-bounce-slow">
-           <div className="w-16 h-16 border-4 border-blue-500/30 rounded-full border-t-blue-500 animate-spin" />
+        <div className="absolute -bottom-10 -left-10 w-32 h-32 sm:h-20 sm:w-20 bg-blue-600/20 dark:bg-blue-900/30 backdrop-blur-md border border-blue-400/20 rounded-full shadow-2xl flex items-center justify-center animate-bounce-slow">
+           <div className="w-16 h-16 border-4 border-blue-500/30 rounded-full border-t-blue-500 sm:w-10 sm:h-10 animate-spin" />
         </div>
       </div>
     </div>
