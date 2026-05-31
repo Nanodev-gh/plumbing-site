@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Good Flow Plumbing Services",
   description: "Professional plumbing services with a modern touch. We fix leaks, pipes, and more.",
+  icons: {
+    icon: '/icon.png', // Or /icon.ico
+  },
 };
 
 export default function RootLayout({
